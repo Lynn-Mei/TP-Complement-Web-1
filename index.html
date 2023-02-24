@@ -7,7 +7,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/accueil.css" rel="stylesheet" />
 </head>
-<body>        
+<body>
     <main>
         <div class="side">
             <h2>Liste des logiciels</h2>
@@ -42,16 +42,19 @@
             </div>
         </div>
         <div class="content">
-            <div id="software" class="software">                
+            <div id="software" class="software">
             </div>
 
             <div id="actions" class="fillContent hide">
-                <label id="modify" class="admin link" >Modifier la fiche</label>
+                <label id="modify" class="admin link">Modifier la fiche</label>
                 <label class="admin link" id="delete">Supprimer la fiche</label>
             </div>
         </div>
-        
     </main>
-
+    <script src="js/observable.js"></script>
+    <script src="js/observer.js"></script>
+    <script src="js/controler/controler.js"></script>
+    <script src="js/view/viewindex.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

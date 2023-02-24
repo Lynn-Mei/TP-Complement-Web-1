@@ -8,9 +8,9 @@
 class Database
 {    
     private string $host = "localhost";
-    private string $base = "xxx"; // <- put your database name
-    private string $user="xxx"; // <-- put your DB user (grp-xxx)
-    private string $pass="xxx"; // <--- put your DB password (see mdp.txt)
+    private string $base = "iut"; // <- put your database name
+    private string $user="root"; // <-- put your DB user (grp-xxx)
+    private string $pass=""; // <--- put your DB password (see mdp.txt)
     private PDO $pdo;
 
     /**

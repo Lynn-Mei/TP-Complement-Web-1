@@ -11,7 +11,9 @@ class ViewIndex {
     constructor(controler) {
         this.controler = controler;
         this.filieres = document.getElementById("years");
+        this.matieres = document.getElementById("courses");
         this.listFilieres();
+        this.listMatieres();
     }
     listFilieres() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -23,6 +25,23 @@ class ViewIndex {
                     item.value = filiere.ID.toString();
                     item.innerHTML = filiere.nom;
                     this.filieres.appendChild(item);
+                });
+            }
+            catch (e) {
+                alert(e.message);
+            }
+        });
+    }
+    listMatieres() {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let dao = new MatiereDao();
+                let matieres = yield dao.getAll();
+                matieres.forEach((matiere) => {
+                    let item = document.createElement("option");
+                    item.value = matiere.ID.toString();
+                    item.innerHTML = matiere.Nom;
+                    this.matieres.appendChild(item);
                 });
             }
             catch (e) {

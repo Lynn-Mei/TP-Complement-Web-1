@@ -1,9 +1,4 @@
 class FiliereDao {
-
-  public constructor() {
-
-  }
-
   public async getAll(): Promise<Array<Filiere>> {
     let filieres = new Array<Filiere>();
     let response = await fetch("php/filieres.php");

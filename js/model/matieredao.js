@@ -7,24 +7,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-class FiliereDao {
+class MatiereDao {
     getAll() {
         return __awaiter(this, void 0, void 0, function* () {
-            let filieres = new Array();
-            let response = yield fetch("php/filieres.php");
+            let matieres = new Array();
+            let response = yield fetch("php/matieres.php");
             if (response.ok) {
                 let array = yield response.json();
                 array.forEach((obj) => {
-                    let filiere = new Filiere();
-                    filiere.ID = obj.ID;
-                    filiere.nom = obj.nom;
-                    filieres.push(filiere);
+                    let matiere = new Matiere();
+                    matiere.ID = obj.ID;
+                    matiere.Code = obj.Code;
+                    matiere.Nom = obj.Nom;
+                    matieres.push(matiere);
                 });
             }
             else
                 throw new Error("Unable to get from server");
-            return filieres;
+            return matieres;
         });
     }
 }
-//# sourceMappingURL=filieredao.js.map
+//# sourceMappingURL=matieredao.js.map

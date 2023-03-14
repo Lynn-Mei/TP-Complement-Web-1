@@ -10,5 +10,7 @@ echo json_encode($data);
 
 echo "<h2>Test : get filieres by dao</h2>";
 include("php/filieres.php");
+echo "<h2>Test : get all Logiciels</h2>";
+include("php/logiciels.php");
 
 ?>  
